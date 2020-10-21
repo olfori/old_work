@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="row mt-5 pass">
+        <div class="top col-lg-12 order-lg-1 pt-4">
+            <div class="row">
+                <a href="/">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.7071 18.793L7.41414 13.5H19.0001V11.5L7.41429 11.5L12.7071 6.20718L11.2929 4.79297L4.29289 11.793C3.90237 12.1835 3.90237 12.8167 4.29289 13.2072L11.2929 20.2072L12.7071 18.793Z" fill="#1E1E2D"/>
+                    </svg>
+                    Back
+                </a>
+                <h4>Settings</h4>
+            </div>
+        </div>
+        <div class="col">
+            <form action="" method="POST" novalidate class="login-form">
+                {{ form.hidden_tag() }}
+                <div class="form-group">
+                    {{ form.old_password.label(for="old_password") }}
+                    {{ form.old_password(class="form-control", placeholder="Old password") }}
+                    {% for error in form.old_password.errors %}
+                    <div class="alert alert-danger mt-3" role="alert">{{ error }}</div>
+                    {% endfor %}
+                </div>
+                <div class="form-group">
+                    {{ form.password.label(for="password") }}
+                    {{ form.password(class="form-control", placeholder="New password") }}
+                    {% for error in form.password.errors %}
+                    <div class="alert alert-danger mt-3" role="alert">{{ error }}</div>
+                    {% endfor %}
+                </div>
+                <div class="form-group">
+                    {{ form.password2.label(for="password2") }}
+                    {{ form.password2(class="form-control", placeholder="Repeat password") }}
+                    {% for error in form.password2.errors %}
+                    <div class="alert alert-danger mt-3" role="alert">{{ error }}</div>
+                    {% endfor %}
+                </div>
+                <div class="row bottom">
+                    <button type="submit" class="btn btn-primary btn-login">Submit</button>
+                    <a href="/">Cancel</a>
+                </div>
+            </form>
+            {% if message %}
+            <br>
+            <div class="alert alert-success mt-3" role="alert">
+                {{ message }}
+            </div>
+            {% endif %}
+            <br>
+        </div>
+    </div>
+</div>
+{% endblock %}

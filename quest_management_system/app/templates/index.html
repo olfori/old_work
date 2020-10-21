@@ -1,0 +1,313 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+	<div class="row">
+		<div class="col-lg-12 order-lg-1 pt-4">
+			<div class="top">
+				<img src="{{ url_for('static', filename='img/Logo-dark.svg') }}">
+				<div class="row">
+					<div class="dot">
+						<div class="col">
+							<h5>
+								<span id="q_server" class="badge badge-{{ q_server }}">Server</span>
+							</h5>
+						</div>
+						<div class="col">
+							<h5>
+								<span id="tech_box" class="badge badge-{{ tech_box }}">Tech box</span>
+							</h5>
+						</div>
+					</div>
+					<div class="more">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+							<path fill="none" d="M0 0h24v24H0z" />
+							<path
+								d="M4.5 10.5c-.825 0-1.5.675-1.5 1.5s.675 1.5 1.5 1.5S6 12.825 6 12s-.675-1.5-1.5-1.5zm15 0c-.825 0-1.5.675-1.5 1.5s.675 1.5 1.5 1.5S21 12.825 21 12s-.675-1.5-1.5-1.5zm-7.5 0c-.825 0-1.5.675-1.5 1.5s.675 1.5 1.5 1.5 1.5-.675 1.5-1.5-.675-1.5-1.5-1.5z"
+								fill="rgba(136,140,159,1)" /></svg>
+					</div>
+					<div class="settings">
+						<div class="export">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M13 16.5859L18.293 11.293L19.7072 12.7072L12.7072 19.7072C12.3167 20.0977 11.6835 20.0977 11.293 19.7072L4.29297 12.7072L5.70718 11.293L11 16.5858V5H13V16.5859Z"
+									fill="#888C9F" />
+							</svg>
+							<button type="button" class="btn w-100 border load" title="Download .csv file"
+								data-toggle="modal" data-target="#mainModal" data-placement="top" id="load">Export
+								statictics</button>
+							<a id="download-link" href="/download" target='_blank' style="display:none;" hidden></a>
+						</div>
+						<div class="reset">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M18.537 19.567C16.7224 21.1393 14.401 22.0033 12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 14.136 21.33 16.116 20.19 17.74L17 12H20C19.9998 10.1562 19.3628 8.36906 18.1967 6.94089C17.0305 5.51272 15.4069 4.53119 13.6003 4.16236C11.7938 3.79352 9.91533 4.06002 8.28268 4.91677C6.65002 5.77351 5.36342 7.16791 4.64052 8.86408C3.91762 10.5603 3.80281 12.4541 4.31549 14.2251C4.82818 15.9962 5.93689 17.5358 7.45408 18.5836C8.97127 19.6313 10.8038 20.1228 12.6416 19.9749C14.4795 19.827 16.2099 19.0488 17.54 17.772L18.537 19.567Z"
+									fill="#888C9F" />
+							</svg>
+							<button type="button" class="btn w-100 border game_reset" title="Reset Game"
+								data-toggle="modal" data-target="#mainModal" data-placement="top" id="res">Reset
+								system</button>
+						</div>
+						<a href="/change_pass">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M3.3403 16.9998C2.91758 16.2688 2.58897 15.4873 2.3623 14.6738C2.85561 14.4229 3.2699 14.0404 3.55933 13.5687C3.84877 13.097 4.00207 12.5544 4.00228 12.0009C4.00248 11.4475 3.84959 10.9048 3.56051 10.4328C3.27143 9.96088 2.85742 9.57809 2.3643 9.32682C2.81634 7.69231 3.67703 6.19977 4.8653 4.98982C5.3294 5.29155 5.86792 5.45898 6.42128 5.4736C6.97464 5.48822 7.52126 5.34945 8.00063 5.07265C8.48001 4.79586 8.87346 4.39182 9.13743 3.90526C9.4014 3.41871 9.52561 2.8686 9.4963 2.31582C11.1384 1.89145 12.8615 1.89213 14.5033 2.31782C14.4743 2.87059 14.5987 3.42061 14.8629 3.90703C15.1271 4.39345 15.5207 4.7973 16.0001 5.07388C16.4796 5.35047 17.0262 5.48901 17.5796 5.47417C18.1329 5.45934 18.6713 5.2917 19.1353 4.98982C19.7143 5.57982 20.2283 6.25082 20.6603 6.99982C21.0933 7.74882 21.4173 8.52982 21.6383 9.32582C21.145 9.57672 20.7307 9.9592 20.4413 10.4309C20.1518 10.9027 19.9985 11.4453 19.9983 11.9987C19.9981 12.5522 20.151 13.0949 20.4401 13.5668C20.7292 14.0388 21.1432 14.4216 21.6363 14.6728C21.1843 16.3073 20.3236 17.7999 19.1353 19.0098C18.6712 18.7081 18.1327 18.5407 17.5793 18.526C17.026 18.5114 16.4794 18.6502 16 18.927C15.5206 19.2038 15.1272 19.6078 14.8632 20.0944C14.5992 20.5809 14.475 21.131 14.5043 21.6838C12.8622 22.1082 11.1391 22.1075 9.4973 21.6818C9.52635 21.1291 9.4019 20.579 9.13773 20.0926C8.87355 19.6062 8.47995 19.2023 8.00048 18.9258C7.52101 18.6492 6.97436 18.5106 6.42103 18.5255C5.8677 18.5403 5.32927 18.7079 4.8653 19.0098C4.2743 18.4068 3.7619 17.7314 3.3403 16.9998ZM9.0003 17.1958C10.0659 17.8105 10.8672 18.7968 11.2503 19.9658C11.7493 20.0128 12.2503 20.0138 12.7493 19.9668C13.1327 18.7977 13.9343 17.8113 15.0003 17.1968C16.0655 16.5805 17.3208 16.3793 18.5253 16.6318C18.8153 16.2238 19.0653 15.7888 19.2733 15.3338C18.4527 14.4173 17.9994 13.23 18.0003 11.9998C18.0003 10.7398 18.4703 9.56282 19.2733 8.66582C19.0638 8.21097 18.8128 7.77646 18.5233 7.36782C17.3196 7.62013 16.0651 7.4193 15.0003 6.80382C13.9347 6.18919 13.1335 5.20281 12.7503 4.03382C12.2513 3.98682 11.7503 3.98582 11.2513 4.03282C10.8679 5.20197 10.0663 6.18838 9.0003 6.80282C7.93509 7.41914 6.67978 7.62034 5.4753 7.36782C5.18587 7.77611 4.93544 8.21069 4.7273 8.66582C5.54788 9.58238 6.00119 10.7696 6.0003 11.9998C6.0003 13.2598 5.5303 14.4368 4.7273 15.3338C4.93678 15.7887 5.18784 16.2232 5.4773 16.6318C6.68102 16.3795 7.93551 16.5803 9.0003 17.1958ZM12.0003 14.9998C11.2047 14.9998 10.4416 14.6838 9.87898 14.1211C9.31637 13.5585 9.0003 12.7955 9.0003 11.9998C9.0003 11.2042 9.31637 10.4411 9.87898 9.8785C10.4416 9.31589 11.2047 8.99982 12.0003 8.99982C12.796 8.99982 13.559 9.31589 14.1216 9.8785C14.6842 10.4411 15.0003 11.2042 15.0003 11.9998C15.0003 12.7955 14.6842 13.5585 14.1216 14.1211C13.559 14.6838 12.796 14.9998 12.0003 14.9998ZM12.0003 12.9998C12.2655 12.9998 12.5199 12.8945 12.7074 12.7069C12.8949 12.5194 13.0003 12.265 13.0003 11.9998C13.0003 11.7346 12.8949 11.4803 12.7074 11.2927C12.5199 11.1052 12.2655 10.9998 12.0003 10.9998C11.7351 10.9998 11.4807 11.1052 11.2932 11.2927C11.1057 11.4803 11.0003 11.7346 11.0003 11.9998C11.0003 12.265 11.1057 12.5194 11.2932 12.7069C11.4807 12.8945 11.7351 12.9998 12.0003 12.9998Z"
+									fill="#888C9F" />
+							</svg>
+							Change password
+						</a>
+						<a href="/logout">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M5 22C4.73478 22 4.48043 21.8946 4.29289 21.7071C4.10536 21.5196 4 21.2652 4 21V3C4 2.73478 4.10536 2.48043 4.29289 2.29289C4.48043 2.10536 4.73478 2 5 2H19C19.2652 2 19.5196 2.10536 19.7071 2.29289C19.8946 2.48043 20 2.73478 20 3V6H18V4H6V20H18V18H20V21C20 21.2652 19.8946 21.5196 19.7071 21.7071C19.5196 21.8946 19.2652 22 19 22H5ZM18 16V13H11V11H18V8L23 12L18 16Z"
+									fill="#888C9F" />
+							</svg>
+							Logout
+						</a>
+					</div>
+
+				</div>
+			</div>
+			<div class="stat row">
+				<span class="start-number"></span>
+				<div class="progress">
+					<div id="pb" class="progress-bar bg-success" role="progressbar" style="width: 0%"></div>
+				</div>
+			</div>
+			<div class="row col-lg-12">
+				<div class="row col-lg-9 col-md-9">
+					<div class="row name">
+						<div class="block block__left">
+							<div class="col">
+								<h4>{{ cont.name|capitalize }}</h4>
+							</div>
+							<div class="col">
+								<div class="row language">
+									<div class="col">
+										<button type="button" class="btn lang" title="English" data-toggle="modal"
+											data-target="#mainModal" data-placement="top" id="en">
+											<img src="{{ url_for('static', filename='img/USA.svg') }}">
+										</button>
+									</div>
+									<div class="col">
+										<button type="button" class="btn lang" title="Deutsch" data-toggle="modal"
+											data-target="#mainModal" data-placement="top" id="de">
+											<img src="{{ url_for('static', filename='img/GERM.svg') }}"></button>
+									</div>
+									<!--
+                                    <div class="col">
+                                        <button type="button" class="btn lang" title="Russian" data-toggle="modal"
+                                                data-target="#mainModal" data-placement="top" id="ru">Ru</button>
+                                    </div>
+                                    -->
+								</div>
+								<h5 class="timer">
+									<span id="q-timer" class="badge badge-danger">{{ timer.str }}</span>
+								</h5>
+							</div>
+						</div>
+					</div>
+					{% for room in cont.room %}
+					<!-- Room {{ room.num }} -->
+					<div class="block room">
+						<h5>
+							<span>{{ room.name|capitalize }}</span>
+							<span class="{{ room.close_id }} badge badge-secondary p-1">Close</span>
+						</h5>
+						<div class="row room__top">
+							<div class="col-2 col-sm-2 col-lg-3">
+								<b>Tasks</b>
+							</div>
+							<div class="col-2 col-sm-2 col-lg-1">
+								<b>Bypass</b>
+							</div>
+							<div class="col-2 col-sm-2 col-lg-2">
+								<b>Audio</b>
+							</div>
+							<div class="col-2 col-sm-2 col-lg-2">
+								<b>Hint</b>
+							</div>
+							<div class="col-4 col-sm-4 col-lg-4">
+								<b>Signal</b>
+							</div>
+						</div>
+
+						{% for elem in room.element %}
+						<div class="row mt-3">
+							<div class="col-2 col-sm-2 col-md-3">
+								<div class="row">
+									<p class="title">{{ elem.name|capitalize }}</p>
+								</div>
+							</div>
+							<div class="col-2 col-sm-2 col-md-1">
+								{% for bps in elem.bps %}
+								<button id="{{ bps.id }}" type="button" class="btn btn-warning bps"
+									title="{{ bps.name|capitalize }}" data-toggle="modal" data-target="#mainModal"
+									data-placement="top">{{ bps.show }}</button>
+								{% endfor %}
+
+							</div>
+							<div class="col-2 col-sm-2 col-md-2">
+								{% for audio in elem.audio %}
+								<button id="{{ audio.id }}" type="button" class="btn btn-warning aud m-1"
+									title="{{ audio.name|capitalize }}" data-toggle="modal" data-target="#mainModal"
+									data-placement="top">{{ audio.show }}</button>
+								{% endfor %}
+							</div>
+							<div class="col-2 col-sm-2 col-md-2">
+								<div class="row">
+									{% for hint in elem.hint %}
+									<div class="col-12">
+										<button id="hi{{ hint.id }}" type="button" class="btn btn-warning mt-1 hin"
+											title="{{ hint.name|capitalize }} {{ hint.id }}" data-toggle="modal"
+											data-target="#mainModal" data-placement="top">h{{ hint.id }}</button>
+									</div>
+									{% endfor %}
+								</div>
+							</div>
+							<div class="col-4 col-sm-4 col-md-4">
+								{% for sig in elem.sig %}
+								<span class="{{ sig.id }} badge badge-secondary sig">{{ sig.name }}</span>
+								{% endfor %}
+							</div>
+						</div>
+						{% endfor %}
+					</div>
+					{% endfor %}
+				</div>
+				<div class="row col-lg-3 col-md-3">
+					<button type="button" class="btn game game-start" title="Starting the game" data-toggle="modal"
+						data-target="#mainModal" data-placement="top" id="start">Game start</button>
+					<button type="button" class="btn w-100 mt-3 border game game-stop" title="Stop the game"
+						data-toggle="modal" data-target="#mainModal" data-placement="top" id="stop">Game stop</button>
+					<button type="button" class="btn w-100 border test game-test" title="Test Game" data-toggle="modal"
+						data-target="#mainModal" data-placement="top" id="test" disabled>Test</button>
+					<div class="block hints">
+						<div class="row">
+							<h4>Global Hints</h4>
+							<div class="col-lg-12">
+								<button id="hi101_0" type="button" class="btn btn-warning hin" title=""
+									data-toggle="modal" data-target="#mainModal" data-placement="top">No force</button>
+							</div>
+							<div class="col-lg-12">
+								<button id="hi102_0" type="button" class="btn btn-warning hin" title=""
+									data-toggle="modal" data-target="#mainModal" data-placement="top">Be
+									careful</button>
+							</div>
+							<div class="col-lg-12">
+								<button id="hi103_0" type="button" class="btn btn-warning hin" title=""
+									data-toggle="modal" data-target="#mainModal" data-placement="top">No
+									contact</button>
+							</div>
+							<div class="col-lg-12">
+								<button id="hi104_0" type="button" class="btn btn-warning hin" title=""
+									data-toggle="modal" data-target="#mainModal" data-placement="top">Stop</button>
+							</div>
+							<div class="col-lg-12">
+								<button id="hi105_0" type="button" class="btn btn-warning hin" title=""
+									data-toggle="modal" data-target="#mainModal" data-placement="top">Answe</button>
+							</div>
+						</div>
+					</div>
+					<div class="block audio">
+						<h4 class="open">Game sounds
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M11.9997 10.828L7.04974 15.778L5.63574 14.364L11.9997 8L18.3637 14.364L16.9497 15.778L11.9997 10.828Z"
+									fill="#494B69" />
+							</svg>
+						</h4>
+						<div class="open-block">
+							<div class="col-12">
+								<button type="button" class="btn border btn-warning aud" title="{{ cont.sound1.name }}"
+									data-toggle="modal" data-target="#mainModal" data-placement="top"
+									id="{{ cont.sound1.id }}">Start audio</button>
+							</div>
+							<div class="col-12">
+								<div class="row">
+									{% for bg in cont.bg %}
+									<div class="col-6">
+										<button type="button" class="btn mt-1 border btn-warning audbg"
+											title="{{ bg.name }}" data-toggle="modal" data-target="#mainModal"
+											data-placement="top" id="{{ bg.id }}" disabled>{{ bg.id }}</button>
+									</div>
+									{% endfor %}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div hidden>
+	<span id="sig_count">{{ js_settings.SIG_COUNT }}</span>
+	<span id="bps_count">{{ js_settings.BPS_COUNT }}</span>
+	<span id="timer_total">{{ js_settings.TIME_TOTAL }}</span>
+	<span id="tech_box_state">{{ tech_box }}</span>
+	<span id="sig_start_from_1">{{ js_settings.SIG_START_FROM_1 }}</span>
+	<span id="pb_sig">{{ js_settings.PB_SIG }}</span>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="mainModal" tabindex="-1" role="dialog" aria-labelledby="mainModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close mod-0" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M11.9997 10.5862L16.9497 5.63623L18.3637 7.05023L13.4137 12.0002L18.3637 16.9502L16.9497 18.3642L11.9997 13.4142L7.04974 18.3642L5.63574 16.9502L10.5857 12.0002L5.63574 7.05023L7.04974 5.63623L11.9997 10.5862Z"
+								fill="#A7ABC3" /></svg>
+					</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<div id="game_input" class="row mb-3" hidden>
+					<div class="col">
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text" id="basic-addon1">Players</span>
+							</div>
+							<select id="players" class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+								<option selected value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+							</select>
+						</div>
+					</div>
+					<div class="col">
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text" id="basic-addon2">Game ID</span>
+							</div>
+							<input id="game_id" type="text" class="form-control" placeholder="game id"
+								aria-label="game id" aria-describedby="basic-addon2">
+						</div>
+					</div>
+					<hr>
+				</div>
+
+				<span>Confirm the action?</span>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary mod-1" data-dismiss="modal">Confirm</button>
+				<button type="button" class="btn btn-primary mod-0" data-dismiss="modal">Abort</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}

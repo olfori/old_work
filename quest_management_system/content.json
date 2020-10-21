@@ -1,0 +1,656 @@
+{
+    "name": "Indiana",
+    "sound1": {
+        "id": "a0",
+        "name": "Start sound"
+    },
+    "bg": [
+        {
+            "id": "bg1",
+            "name": "quest bg1"
+        },
+        {
+            "id": "bg2",
+            "name": "quest bg2"
+        },
+        {
+            "id": "bg3",
+            "name": "quest bg3"
+        },
+        {
+            "id": "bg4",
+            "name": "quest bg4"
+        },
+        {
+            "id": "bg5",
+            "name": "quest bg5"
+        },
+        {
+            "id": "bg6",
+            "name": "quest bg6"
+        }
+    ],
+    "room": [
+        {
+            "close_id": "s0",
+            "num": "1",
+            "name": "Tent Room",
+            "element": [
+                {
+                    "num": "1",
+                    "name": "Boxes",
+                    "bps": [
+                        {
+                            "id": "b1",
+                            "show": "b1",
+                            "name": "Solve Boxes"
+                        }
+                    ],
+                    "sig": [
+                        {
+                            "id": "s1",
+                            "name": "Solved"
+                        }
+                    ],
+                    "audio": [
+                        {
+                            "id": "a1",
+                            "show": "a1",
+                            "name": "audio a1"
+                        }
+                    ],
+                    "hint": [
+                        {
+                            "id": "1_1",
+                            "name": "hint"
+                        },
+                        {
+                            "id": "1_2",
+                            "name": "hint"
+                        },
+                        {
+                            "id": "1_3",
+                            "name": "hint"
+                        }
+                    ]
+                },
+                {
+                    "num": "2",
+                    "name": "Circles",
+                    "bps": [
+                        {
+                            "id": "b2",
+                            "show": "b2",
+                            "name": "Solve Circles"
+                        }
+                    ],
+                    "sig": [
+                        {
+                            "id": "s2",
+                            "name": "1"
+                        },
+                        {
+                            "id": "s3",
+                            "name": "2"
+                        },
+                        {
+                            "id": "s4",
+                            "name": "3"
+                        },
+                        {
+                            "id": "s5",
+                            "name": "Solved"
+                        }
+                    ],
+                    "audio": [
+                        {
+                            "id": "a5",
+                            "show": "a2",
+                            "name": "audio a2"
+                        }
+                    ],
+                    "hint": [
+                        {
+                            "id": "2_1",
+                            "name": "hint"
+                        },
+                        {
+                            "id": "2_2",
+                            "name": "hint"
+                        },
+                        {
+                            "id": "2_3",
+                            "name": "hint"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "close_id": "s5",
+            "num": "2",
+            "name": "Column Room",
+            "element": [
+                {
+                    "num": "4",
+                    "name": "Eyes",
+                    "bps": [
+                        {
+                            "id": "b3",
+                            "show": "b4",
+                            "name": "Solve Eyes"
+                        }
+                    ],
+                    "sig": [
+                        {
+                            "id": "s6",
+                            "name": "1"
+                        },
+                        {
+                            "id": "s7",
+                            "name": "2"
+                        },
+                        {
+                            "id": "s8",
+                            "name": "3"
+                        },
+                        {
+                            "id": "s9",
+                            "name": "4"
+                        },
+                        {
+                            "id": "s10",
+                            "name": "5"
+                        },
+                        {
+                            "id": "s11",
+                            "name": "Solved"
+                        }
+                    ],
+                    "audio": [
+                        {
+                            "id": "a11",
+                            "show": "a4",
+                            "name": "audio a4"
+                        }
+                    ],
+                    "hint": [
+                        {
+                            "id": "4_1",
+                            "name": "hint"
+                        },
+                        {
+                            "id": "4_2",
+                            "name": "hint"
+                        },
+                        {
+                            "id": "4_3",
+                            "name": "hint"
+                        }
+                    ]
+                },
+                {
+                    "num": "5",
+                    "name": "Cat",
+                    "bps": [
+                        {
+                            "id": "b5",
+                            "show": "b5",
+                            "name": "Solve Cat"
+                        },
+                        {
+                            "id": "b4",
+                            "show": "b6",
+                            "name": "b6"
+                        }
+                    ],
+                    "sig": [
+                        {
+                            "id": "s12",
+                            "name": "Bullets"
+                        },
+                        {
+                            "id": "s13",
+                            "name": "Cat"
+                        },
+                        {
+                            "id": "s14",
+                            "name": "Solved"
+                        }
+                    ],
+                    "audio": [
+                        {
+                            "id": "a14",
+                            "show": "a5",
+                            "name": "audio a5"
+                        }
+                    ],
+                    "hint": [
+                        {
+                            "id": "5_1",
+                            "name": "hint"
+                        },
+                        {
+                            "id": "5_2",
+                            "name": "hint"
+                        },
+                        {
+                            "id": "5_3",
+                            "name": "hint"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "close_id": "s14",
+            "num": "3",
+            "name": "Zoetrop Room",
+            "element": [
+                {
+                    "num": "8",
+                    "name": "Equalizer",
+                    "bps": [
+                        {
+                            "id": "b6",
+                            "show": "b8",
+                            "name": "Solve Equlizer"
+                        }
+                    ],
+                    "sig": [
+                        {
+                            "id": "s15",
+                            "name": "1"
+                        },
+                        {
+                            "id": "s16",
+                            "name": "2"
+                        },
+                        {
+                            "id": "s17",
+                            "name": "3"
+                        },
+                        {
+                            "id": "s18",
+                            "name": "4"
+                        },
+                        {
+                            "id": "s19",
+                            "name": "5"
+                        },
+                        {
+                            "id": "s20",
+                            "name": "Solved"
+                        }
+                    ],
+                    "audio": [
+                        {
+                            "id": "a20",
+                            "show": "a8",
+                            "name": "audio a8"
+                        }
+                    ],
+                    "hint": [
+                        {
+                            "id": "8_1",
+                            "name": "hint"
+                        },
+                        {
+                            "id": "8_2",
+                            "name": "hint"
+                        },
+                        {
+                            "id": "8_3",
+                            "name": "hint"
+                        }
+                    ]
+                },
+                {
+                    "num": "9",
+                    "name": "Buttons",
+                    "bps": [
+                        {
+                            "id": "b7",
+                            "show": "b9",
+                            "name": "Solve Buttons"
+                        }
+                    ],
+                    "sig": [
+                        {
+                            "id": "s21",
+                            "name": "1"
+                        },
+                        {
+                            "id": "s22",
+                            "name": "2"
+                        },
+                        {
+                            "id": "s23",
+                            "name": "3"
+                        },
+                        {
+                            "id": "s24",
+                            "name": "4"
+                        },
+                        {
+                            "id": "s25",
+                            "name": "5"
+                        },
+                        {
+                            "id": "s26",
+                            "name": "6"
+                        },
+                        {
+                            "id": "s27",
+                            "name": "Solved"
+                        }
+                    ],
+                    "audio": [
+                        {
+                            "id": "a27",
+                            "show": "a9",
+                            "name": "audio a9"
+                        }
+                    ],
+                    "hint": [
+                        {
+                            "id": "9_1",
+                            "name": "hint"
+                        },
+                        {
+                            "id": "9_2",
+                            "name": "hint"
+                        },
+                        {
+                            "id": "9_3",
+                            "name": "hint"
+                        }
+                    ]
+                },
+                {
+                    "num": "11",
+                    "name": "Scull",
+                    "bps": [
+                        {
+                            "id": "b8",
+                            "show": "b11",
+                            "name": "Solve Scull"
+                        }
+                    ],
+                    "sig": [
+                        {
+                            "id": "s28",
+                            "name": "Solved"
+                        }
+                    ],
+                    "audio": [
+                        {
+                            "id": "a28",
+                            "show": "a11",
+                            "name": "audio a11"
+                        }
+                    ],
+                    "hint": [
+                        {
+                            "id": "11_1",
+                            "name": "hint"
+                        },
+                        {
+                            "id": "11_2",
+                            "name": "hint"
+                        },
+                        {
+                            "id": "11_3",
+                            "name": "hint"
+                        }
+                    ]
+                },
+                {
+                    "num": "12",
+                    "name": "Man Door",
+                    "bps": [
+                        {
+                            "id": "b9",
+                            "show": "b12",
+                            "name": "Solve ManDoor"
+                        }
+                    ],
+                    "sig": [
+                        {
+                            "id": "s29",
+                            "name": "1"
+                        },
+                        {
+                            "id": "s30",
+                            "name": "2"
+                        },
+                        {
+                            "id": "s31",
+                            "name": "3"
+                        },
+                        {
+                            "id": "s32",
+                            "name": "Solved"
+                        }
+                    ],
+                    "audio": [
+                        {
+                            "id": "a32",
+                            "show": "a12",
+                            "name": "audio a12"
+                        }
+                    ],
+                    "hint": [
+                        {
+                            "id": "12_1",
+                            "name": "hint"
+                        },
+                        {
+                            "id": "12_2",
+                            "name": "hint"
+                        },
+                        {
+                            "id": "12_3",
+                            "name": "hint"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "close_id": "s32",
+            "num": "4",
+            "name": "Sand Room",
+            "element": [
+                {
+                    "num": "14",
+                    "name": "Light",
+                    "sig": [
+                        {
+                            "id": "s47",
+                            "name": "Solved"
+                        }
+                    ],
+                    "audio": [
+                        {
+                            "id": "a47",
+                            "show": "a14",
+                            "name": "audio a14"
+                        }
+                    ],
+                    "hint": [
+                        {
+                            "id": "14_1",
+                            "name": "hint"
+                        },
+                        {
+                            "id": "14_2",
+                            "name": "hint"
+                        },
+                        {
+                            "id": "14_3",
+                            "name": "hint"
+                        }
+                    ]
+                },
+                {
+                    "num": "15",
+                    "name": "Bugs",
+                    "bps": [
+                        {
+                            "id": "b10",
+                            "show": "b15",
+                            "name": "Solve Bugs"
+                        }
+                    ],
+                    "sig": [
+                        {
+                            "id": "s33",
+                            "name": "1"
+                        },
+                        {
+                            "id": "s34",
+                            "name": "2"
+                        },
+                        {
+                            "id": "s35",
+                            "name": "3"
+                        },
+                        {
+                            "id": "s36",
+                            "name": "Solved"
+                        }
+                    ],
+                    "audio": [
+                        {
+                            "id": "a36",
+                            "show": "a15",
+                            "name": "audio a15"
+                        }
+                    ],
+                    "hint": [
+                        {
+                            "id": "15_1",
+                            "name": "hint"
+                        },
+                        {
+                            "id": "15_2",
+                            "name": "hint"
+                        },
+                        {
+                            "id": "15_3",
+                            "name": "hint"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "close_id": "s36",
+            "num": "5",
+            "name": "Mummy Room",
+            "element": [
+                {
+                    "num": "17",
+                    "name": "Candles",
+                    "bps": [
+                        {
+                            "id": "b12",
+                            "show": "b17",
+                            "name": "Solve Candles"
+                        }
+                    ],
+                    "sig": [
+                        {
+                            "id": "s37",
+                            "name": "1"
+                        },
+                        {
+                            "id": "s38",
+                            "name": "2"
+                        },
+                        {
+                            "id": "s39",
+                            "name": "3"
+                        },
+                        {
+                            "id": "s40",
+                            "name": "4"
+                        },
+                        {
+                            "id": "s41",
+                            "name": "5"
+                        },
+                        {
+                            "id": "s43",
+                            "name": "Solved"
+                        }
+                    ],
+                    "audio": [
+                        {
+                            "id": "a43",
+                            "show": "a17",
+                            "name": "audio a17"
+                        }
+                    ],
+                    "hint": [
+                        {
+                            "id": "17_1",
+                            "name": "hint"
+                        },
+                        {
+                            "id": "17_2",
+                            "name": "hint"
+                        },
+                        {
+                            "id": "17_3",
+                            "name": "hint"
+                        }
+                    ]
+                },
+                {
+                    "num": "18",
+                    "name": "Stick",
+                    "bps": [
+                        {
+                            "id": "b13",
+                            "show": "b19",
+                            "name": "Solve Stick"
+                        }
+                    ],
+                    "sig": [
+                        {
+                            "id": "s44",
+                            "name": "Stick"
+                        },
+                        {
+                            "id": "s45",
+                            "name": "Solved"
+                        }
+                    ],
+                    "audio": [
+                        {
+                            "id": "a45",
+                            "show": "a18",
+                            "name": "audio a18"
+                        }
+                    ],
+                    "hint": [
+                        {
+                            "id": "18_1",
+                            "name": "hint"
+                        },
+                        {
+                            "id": "18_2",
+                            "name": "hint"
+                        },
+                        {
+                            "id": "18_3",
+                            "name": "hint"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
